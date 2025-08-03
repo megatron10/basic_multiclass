@@ -20,5 +20,14 @@
   * 0 error rate without norms.
   
 
-![dataset](./Screenshots/Screenshot%202025-08-03%20at%2012.34.16 AM.png "dataset")
-![manualtest](./Screenshots/Screenshot%202025-08-03%20at%2012.46.34 AM.png "perry the platypus")
+![dataset](./Screenshots/dataset.png "dataset")
+![manualtest](./Screenshots/perry_kicks.png "perry the platypus")
+
+## Confusion matrix and error explanations
+![confusion_matrix](./Screenshots/confusion_matrix.png "Confusion matrix")
+- The model works quite well for the small amount of effort put into it.
+
+![Errors](./Screenshots/error_images.png "misses")
+- The error cases indicate that model is biased to classify 3D cartoon images to Tom & Jerry, and flatter 2d like Phineas and Ferb!
+- Searching more different training set images of different styles so it doesn't overindex on style would help.
+- Like give it more images of: Sketch and 3d styles of each class, so it can't associate things like this. Anyway, I will move onto the next lesson!
