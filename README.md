@@ -8,7 +8,7 @@
 ## Curious
 - What the heck does finetune a resnet mean? Resnet has a convolutional layer, max pool, followed by 4 residual layers with 2 conv layers each. Then a fully connected output layer nn.Linear to classes. Fine-tuning typically just trains this last layer to understand newer labels.
 
-- Tried to see what the error rate function gets as input, it operates at batch level, gets the linear layer outputs before softmax for entire batch, along with prediction indexes for entire batch, it computes prediction and then 0-1 error.
+- Tried to see what the `error_rate` function works, it operates at batch level, gets the linear layer outputs before softmax for entire batch, along with `y_actual` for entire batch, it computes prediction using softmax/argmax and then simple 0-1 error.
 
 ## Experiment, does it understand cartoons.
 - Multi classification: Phineas and Ferb, Tom and Jerry, Anime. I checked manual search on DDG, and its probably not going to be easy as it not simple close up pictures. There's lots of different characters. I wasn't able to "prompt" it to get a single character for some reason.
@@ -28,6 +28,6 @@
 - The model works quite well for the small amount of effort put into it.
 
 ![Errors](./Screenshots/error_images.png "misses")
-- The error cases indicate that model is biased to classify 3D cartoon images to Tom & Jerry, and flatter 2d like Phineas and Ferb!
+- The error cases indicate that model is biased by cartoon style. 3d images are more likely to be classified as Tom & Jerry, and flatter 2d like Phineas and Ferb! I see Tom & Jerry 3d images in training set, but none of P&F.
 - Searching more different training set images of different styles so it doesn't overindex on style would help.
-- Like give it more images of: Sketch and 3d styles of each class, so it can't associate things like this. Anyway, I will move onto the next lesson!
+- Give it more images of: Sketch and 3d styles of each class, so it can't associate things like this. Anyway, I will move onto the next lesson!
