@@ -1,3 +1,17 @@
+---
+title: Basic Multiclass
+emoji: 🐢
+colorFrom: pink
+colorTo: indigo
+sdk: gradio
+sdk_version: 5.39.0
+app_file: app.py
+pinned: false
+license: apache-2.0
+python_version: "3.13.3"
+short_description: classify between anime, tom & jerry, phineas & ferb
+---
+
 # Fast AI Practical Deep Learning course: Lectures 1-2.
 - This is an adaptation of simple bird classifier from lectures 1 and 2.
 
@@ -19,7 +33,6 @@
   * Dataset had skew: 120 anime, 140 p&f, 180 t&j
   * 0 error rate without norms.
   
-
 ![dataset](./Screenshots/dataset.png "dataset")
 ![manualtest](./Screenshots/perry_kicks.png "perry the platypus")
 

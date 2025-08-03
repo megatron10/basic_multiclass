@@ -2,7 +2,7 @@ from fastcore.all import *
 from fastai.vision.all import *
 import gradio as gr
 
-learn = load_learner('test.pkl')
+learn = load_learner('./test.pkl')
 categories = ('anime', 'phineas and ferb', 'tom & jerry')
 
 def classify_image(img):
@@ -13,7 +13,7 @@ demo = gr.Interface(
     fn=classify_image,
     inputs=["image"],
     outputs=["label"],
-    examples=["perry.jpg","aot.jpg","t&j.jpg","phineas_and_ferb.jpg"]
+    examples=["./perry.jpg","./aot.jpg","./t&j.jpg","./phineas_and_ferb.jpg"]
 )
 
 demo.launch()
